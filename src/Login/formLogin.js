@@ -1,30 +1,39 @@
-import React, { Component } from 'react';
-import Logo from "../images/logologin.jpg"
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image } from 'react-native';
-
+import React, {Component} from 'react';
+import Logo from '../images/logologin.jpg';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  TextInput,
+  Image,
+} from 'react-native';
 
 export default class FormLogin extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
-    const { handleLoginview } = this.props
+    const {handleLoginview} = this.props;
     return (
       <View style={styles.container}>
-        <Image style={{ marginBottom: 50, width: 250, height: 60 }} source={Logo} />
+        <Image
+          style={{marginBottom: 50, width: 250, height: 60}}
+          source={Logo}
+        />
 
         <TextInput
           style={styles.textInput}
-          placeholder='Masukan Email'
+          placeholder="Masukan Email"
           utoCapitalize="none"
-          placeholderTextColor='#ffffff'
+          placeholderTextColor="#ffffff"
         />
         <TextInput
           secureTextEntry
           style={[styles.textInput]}
-          placeholder='Masukan Password'
-          placeholderTextColor='#ffffff'
+          placeholder="Masukan Password"
+          placeholderTextColor="#ffffff"
         />
 
         <TouchableOpacity style={styles.buttonStyle}>
@@ -33,13 +42,10 @@ export default class FormLogin extends Component {
         <TouchableOpacity onPress={() => handleLoginview()}>
           <Text style={styles.instructions}>Tidak Punya Akun? Daftar</Text>
         </TouchableOpacity>
-        <Text style={styles.instructions}>© REZI FERDIANSYAH.2021</Text>
       </View>
-
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -47,24 +53,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'black',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   textInput: {
     height: 40,
     borderColor: '#ffffff',
+    backgroundColor: '#202020',
     borderWidth: 1,
     color: '#ffffff',
     paddingLeft: 10,
     paddingRight: 10,
     marginBottom: 10,
-    width: 300
+    width: 300,
   },
   buttonStyle: {
-    backgroundColor: 'blue',
+    backgroundColor: '#1E90FF',
     paddingLeft: 10,
     paddingRight: 10,
     marginTop: 10,
-    width: 300
+    width: 300,
   },
   textSignup: {
     fontSize: 16,
@@ -76,6 +83,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#ffffff',
     marginBottom: 5,
-    marginTop: 10
+    marginTop: 10,
   },
 });
